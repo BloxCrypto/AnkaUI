@@ -1,11 +1,3 @@
---[[
-	credits: 
-	"GetTextBounds" function taken from linoria library -- https://github.com/violin-suzutsuki/LinoriaLib
-	this ui library fork from Bracket V3 -- https://github.com/AlexR32/Bracket/blob/main/BracketV3.lua
-	i didnt really stick with 1 style i just did whatever i wanted at some parts used ai help bc im lazy -- https://github.com/nfpw
-	i forgot to add this section but some stuff generated from ai bc im lazy ass (chat-gpt) but mostly i did the stuff used it for fixes
-]]
-
 local Library = {
 	Toggle = true,
 	FirstTab = nil,
