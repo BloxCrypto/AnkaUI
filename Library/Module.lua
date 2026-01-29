@@ -77,7 +77,7 @@ local function requesturl(i, v)
 		end
 		return req.Body
 	end
-	local baseurl = "https://raw.githubusercontent.com/nfpw/Anka/main/Assests/"
+	local baseurl = "https://raw.githubusercontent.com/BloxCrypto/AnkaUI/main/Assets"
 	local req = http_request({
 		Url = baseurl .. i,
 		Method = "GET",
@@ -467,7 +467,7 @@ if RunService:IsStudio() then
 	Notifications = require(ReplicatedStorage.notif).New(NotificationsGui, Color3.fromRGB(255, 128, 64))
 else
 	Notifications = loadstring(
-		requesturl("https://raw.githubusercontent.com/nfpw/XXSCRIPT/refs/heads/main/Library/NotificationModule.lua")
+		requesturl("https://raw.githubusercontent.com/BloxCrypto/AnkaUI/refs/heads/main/Library/NotificationModule.lua")
 	)().New(NotificationsGui, Color3.fromRGB(255, 128, 64))
 end
 repeat
@@ -525,7 +525,7 @@ function Library:CreateWindow(Config: {
 	else
 		Folder = loadstring(
 			requesturl(
-				"https://raw.githubusercontent.com/nfpw/XXSCRIPT/refs/heads/main/Library/Folder/ModuleFolder.lua"
+				"https://raw.githubusercontent.com/BloxCrypto/AnkaUI/refs/heads/main/Library/Folder/ModuleFolder.lua"
 			)
 		)()
 	end
