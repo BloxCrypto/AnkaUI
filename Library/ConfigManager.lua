@@ -1,9 +1,3 @@
---[[
-	credits: 
-	making configs taken from linoria library -- https://github.com/violin-suzutsuki/LinoriaLib
-	this code contains my old stuff + new stuff + skidded stuff 💀 -- https://github.com/nfpw
-]]
-
 local ConfigManager = {};
 local cloneref = cloneref or function(v) return v; end;
 local function getservice(v) return cloneref(game:GetService(v)); end;
@@ -13,7 +7,7 @@ do
     local HttpService = getservice("HttpService");
     local RunService = getservice("RunService");
     
-    ConfigManager.Folder = "Anka";
+    ConfigManager.Folder = "AnkaUI";
     ConfigManager.Ignore = {};
     ConfigManager.CurrentPlaceId = tostring(game.PlaceId);
     ConfigManager.CurrentGameId = tostring(game.GameId);
