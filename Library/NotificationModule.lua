@@ -1,9 +1,3 @@
---[[
-	i was so lazy to make notification for 
-	libraryso i used claude to make one 
-	this code 80% pasted -- https://claude.ai/
-]]
-
 local NotificationSystem = {}
 NotificationSystem.__index = NotificationSystem
 NotificationSystem.NotificationSize = UDim2.new(0, 300, 0, 70)
