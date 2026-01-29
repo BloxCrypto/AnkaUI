@@ -1,5 +1,5 @@
 local config = {
-	correctkey = "nfpw",
+	correctkey = "Lievi",
 	keylink = "link",
 
 	colors = {
