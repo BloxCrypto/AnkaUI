@@ -6,11 +6,8 @@ Basic UI library
 ## 1. Load the library first
 
 ```lua
--- load the library first
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/BloxCrypto/AnkaUI/refs/heads/main/Library/Module.lua"))()
 
--- custom gui settings (optional, you can remove if not needed)
-local stored_fonts = {}
 gui_config = {
     Color = Color3.fromRGB(255, 255, 255),
     Keybind = Enum.KeyCode.Insert, -- for pc related only
@@ -23,11 +20,6 @@ gui_config = {
     InitialWidth = 500
 }
 
-for _, v in Enum.Font:GetEnumItems() do
-    table.insert(stored_fonts, v.Name)
-end
-
--- use config if available
 local config = (getfenv().gui_config) or nil
 local window = library:CreateWindow(config, gethui())
 local window_name = library:SetWindowName("Example Name")
