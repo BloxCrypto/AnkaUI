@@ -1,14 +1,14 @@
 ***
 
-# XXSCRIPT UI Library Documentation
+# Anka UI Library Documentation
 
-A powerful, customizable Roblox GUI library for creating sleek, modern interfaces with toggles, sliders, dropdowns, and more.
+Basic UI library
 
 ## Quick Start
 
 ```lua
 -- Load the library
-local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/nfpw/XXSCRIPT/refs/heads/main/Library/Module.lua"))()
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/BloxCrypto/AnkaUI/refs/heads/main/Library/Module.lua"))()
 
 -- Create window with optional config
 local config = {
@@ -131,7 +131,7 @@ watermark:SetText("Text here")
 
 #### Config Manager (Optional)
 ```lua
-local config_manager = loadstring(game:HttpGet("https://raw.githubusercontent.com/nfpw/XXSCRIPT/refs/heads/main/Library/ConfigManager.lua"))()
+local config_manager = loadstring(game:HttpGet("https://raw.githubusercontent.com/BloxCrypto/AnkaUI/refs/heads/main/Library/ConfigManager.lua"))()
 config_manager:SetLibrary(library)
 config_manager:SetWindow(window)
 config_manager:SetFolder("MyConfigs")
