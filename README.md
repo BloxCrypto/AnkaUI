@@ -3,16 +3,18 @@
 Basic UI library
 
 ---
-
-## 1. Configuration
-
-You can define a global `gui_config` table to customize the initial GUI settings:
+## Load the library first
 
 ```lua
+-- load the library first
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/nfpw/XXSCRIPT/refs/heads/main/Library/Module.lua"))()
+
+-- custom gui settings (optional, you can remove if not needed)
+local stored_fonts = {}
 gui_config = {
-    Color = Color3.fromRGB(255, 255, 255), -- Default text color
-    Keybind = Enum.KeyCode.Insert,         -- Key to toggle GUI visibility
-    Assets = false,                        -- Enable custom background asset
+    Color = Color3.fromRGB(255, 255, 255),
+    Keybind = Enum.KeyCode.Insert, -- for pc related only
+    Assets = false, -- set to true if you want custom background asset
     MinHeight = 100,
     MaxHeight = 600,
     InitialHeight = 400,
@@ -20,22 +22,15 @@ gui_config = {
     MaxWidth = 800,
     InitialWidth = 500
 }
-```
 
-- **Color**: Default text color for GUI elements.  
-- **Keybind**: Keyboard shortcut to toggle GUI.  
-- **Assets**: Enable/disable custom background images.  
-- **Min/Max Height/Width**: Size constraints for the window.  
-- **InitialHeight/Width**: Default size when GUI loads.  
+for _, v in Enum.Font:GetEnumItems() do
+    table.insert(stored_fonts, v.Name)
+end
 
----
-
-## 2. Window Creation
-
-```lua
-local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/BloxCrypto/AnkaUI/refs/heads/main/Library/Module.lua"))()
-local window = library:CreateWindow(gui_config, gethui())
-library:SetWindowName("Example Name")
+-- use config if available
+local config = (getfenv().gui_config) or nil
+local window = library:CreateWindow(config, gethui())
+local window_name = library:SetWindowName("Example Name")
 ```
 
 - `CreateWindow(config, parent)`: Creates the main GUI window.  
