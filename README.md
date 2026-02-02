@@ -3,11 +3,11 @@
 Basic UI library
 
 ---
-## Load the library first
+## 1. Load the library first
 
 ```lua
 -- load the library first
-local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/nfpw/XXSCRIPT/refs/heads/main/Library/Module.lua"))()
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/BloxCrypto/AnkaUI/refs/heads/main/Library/Module.lua"))()
 
 -- custom gui settings (optional, you can remove if not needed)
 local stored_fonts = {}
@@ -38,7 +38,7 @@ local window_name = library:SetWindowName("Example Name")
 
 ---
 
-## 3. Tabs
+## 2. Tabs
 
 Tabs organize sections inside the window:
 
@@ -51,7 +51,7 @@ local tabs = {
 
 ---
 
-## 4. Sections
+## 3. Sections
 
 Sections group UI elements inside tabs:
 
@@ -71,7 +71,7 @@ local sections = {
 
 ---
 
-## 5. UI Elements
+## 4. UI Elements
 
 ### Toggles
 ```lua
@@ -144,7 +144,7 @@ window:SetFont(selected_font)
 
 ---
 
-## 6. Notifications
+## 5. Notifications
 
 ```lua
 window:Notify("Title", "Content", 5)
@@ -153,7 +153,7 @@ window:Notify("Title", "Content", 5)
 
 ---
 
-## 7. HUD / Watermark
+## 6. HUD / Watermark
 
 ```lua
 local watermark = library:Hud()
@@ -164,7 +164,7 @@ end)
 
 ---
 
-## 8. Config Manager
+## 7. Config Manager
 
 ```lua
 local config_manager = loadstring(game:HttpGet("https://raw.githubusercontent.com/BloxCrypto/AnkaUI/refs/heads/main/Library/ConfigManager.lua"))()
@@ -179,7 +179,7 @@ config_manager:LoadAutoloadConfig()
 
 ---
 
-## 9. Background Customization
+## 8. Background Customization
 
 ```lua
 window:SetBackground("123456789") -- Roblox asset ID
