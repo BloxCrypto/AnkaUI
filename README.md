@@ -49,13 +49,8 @@ Sections group UI elements inside tabs:
 
 ```lua
 local sections = {
-    toggle_example_section = tabs.main:CreateSection("Toggle Example"),
-    label_example_section = tabs.main:CreateSection("Label Example"),
-    button_example_section = tabs.main:CreateSection("Button Example"),
-    textbox_example_section = tabs.main:CreateSection("Textbox Example"),
-    dropdown_example_section = tabs.main:CreateSection("Dropdown Example"),
-    slider_example_section = tabs.main:CreateSection("Slider Example"),
-    other_example_section = tabs.main:CreateSection("Other Example", "right")
+    main = tabs.main:CreateSection("main"),
+    other = tabs.main:CreateSection("Other", "right")
 }
 ```
 
