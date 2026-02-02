@@ -1,6 +1,6 @@
-# Documentation for Custom Roblox UI Library
+# AnkaUI
 
-This document explains how to use the provided UI library to build customizable GUIs in Roblox. It covers configuration, window creation, tabs, sections, and all available UI elements.
+Basic UI library
 
 ---
 
@@ -33,7 +33,7 @@ gui_config = {
 ## 2. Window Creation
 
 ```lua
-local library = loadstring(game:HttpGet(".../Library/Module.lua"))()
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/BloxCrypto/AnkaUI/refs/heads/main/Library/Module.lua"))()
 local window = library:CreateWindow(gui_config, gethui())
 library:SetWindowName("Example Name")
 ```
@@ -172,7 +172,7 @@ end)
 ## 8. Config Manager
 
 ```lua
-local config_manager = loadstring(game:HttpGet(".../Library/ConfigManager.lua"))()
+local config_manager = loadstring(game:HttpGet("https://raw.githubusercontent.com/BloxCrypto/AnkaUI/refs/heads/main/Library/ConfigManager.lua"))()
 config_manager:SetLibrary(library)
 config_manager:SetWindow(window)
 config_manager:SetFolder("Example Name")
@@ -193,17 +193,3 @@ window:SetTileScale(0.5)
 window:SetBackgroundColor(Color3.fromRGB(40,40,40))
 window:SetBackgroundTransparency(0.5)
 ```
-
----
-
-## Summary
-
-This UI library provides a **modular system** for building Roblox GUIs with:
-- Configurable windows  
-- Tabs and sections  
-- Toggles, sliders, dropdowns, textboxes, buttons, labels  
-- Notifications and HUD  
-- Config saving/loading  
-- Background customization  
-
-Would you like me to also create a **quick-start template** (minimal example) so you can copy-paste and build a GUI instantly?
